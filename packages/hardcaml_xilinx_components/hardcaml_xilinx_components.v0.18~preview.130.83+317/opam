@@ -1,0 +1,36 @@
+opam-version: "2.0"
+maintainer: "Jane Street developers"
+authors: ["Jane Street Group, LLC"]
+homepage: "https://github.com/janestreet/hardcaml_xilinx_components"
+bug-reports:
+  "https://github.com/janestreet/hardcaml_xilinx_components/issues"
+dev-repo: "git+https://github.com/janestreet/hardcaml_xilinx_components.git"
+doc:
+  "https://ocaml.janestreet.com/ocaml-core/latest/doc/hardcaml_xilinx_components/index.html"
+license: "MIT"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml"     {>= "5.1.0"}
+  "base"      {= "v0.18~preview.130.83+317"}
+  "core"      {= "v0.18~preview.130.83+317"}
+  "core_unix" {= "v0.18~preview.130.83+317"}
+  "hardcaml"  {= "v0.18~preview.130.83+317"}
+  "ppx_jane"  {= "v0.18~preview.130.83+317"}
+  "stdio"     {= "v0.18~preview.130.83+317"}
+  "dune"      {>= "3.17.0"}
+  "re"        {>= "1.8.0"}
+]
+available: arch != "arm32" & arch != "x86_32"
+synopsis: "Hardcaml Xilinx component definitions"
+description: """
+A tool for reading Xilinx VHDL Unisim and XPM component definitions from a Vivado
+installation and generating Hardcaml interfaces automatically.
+"""
+url {
+  src:
+    "https://github.com/janestreet/hardcaml_xilinx_components/archive/319c5c7358b4c5fcfb9e1e21c8ee47f648c9b0e2.tar.gz"
+  checksum:
+    "sha256=5176e6ae71f4113c13472bf876eda511c50f6b8184d6688c6e1d21293ef056d5"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+maintainer: "Jane Street developers"
+authors: ["Jane Street Group, LLC"]
+homepage: "https://github.com/janestreet/memtrace"
+bug-reports: "https://github.com/janestreet/memtrace/issues"
+dev-repo: "git+https://github.com/janestreet/memtrace.git"
+doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/memtrace/index.html"
+license: "MIT"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml"        {>= "4.11.0"}
+  "base-threads"
+  "dune"         {>= "3.17.0"}
+]
+available: arch != "arm32" & arch != "x86_32"
+synopsis: "Streaming client for Memprof"
+description: """
+Generates compact traces of a program's memory use.
+"""
+url {
+  src:
+    "https://github.com/janestreet/memtrace/archive/a88470c3de884182503ba5fcd4729e281e544731.tar.gz"
+  checksum:
+    "sha256=b1b3a033e22698b9abfcd65bf188a26e92822269cda69ee959d7e4ed4296e5f1"
+}

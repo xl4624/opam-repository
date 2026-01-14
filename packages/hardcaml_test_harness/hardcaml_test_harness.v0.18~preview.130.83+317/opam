@@ -1,0 +1,36 @@
+opam-version: "2.0"
+maintainer: "Jane Street developers"
+authors: ["Jane Street Group, LLC"]
+homepage: "https://github.com/janestreet/hardcaml_test_harness"
+bug-reports: "https://github.com/janestreet/hardcaml_test_harness/issues"
+dev-repo: "git+https://github.com/janestreet/hardcaml_test_harness.git"
+doc:
+  "https://ocaml.janestreet.com/ocaml-core/latest/doc/hardcaml_test_harness/index.html"
+license: "MIT"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml"                    {>= "5.1.0"}
+  "core"                     {= "v0.18~preview.130.83+317"}
+  "expect_test_helpers_core" {= "v0.18~preview.130.83+317"}
+  "hardcaml"                 {= "v0.18~preview.130.83+317"}
+  "hardcaml_step_testbench"  {= "v0.18~preview.130.83+317"}
+  "hardcaml_waveterm"        {= "v0.18~preview.130.83+317"}
+  "ppx_hardcaml"             {= "v0.18~preview.130.83+317"}
+  "ppx_jane"                 {= "v0.18~preview.130.83+317"}
+  "dune"                     {>= "3.17.0"}
+]
+available: arch != "arm32" & arch != "x86_32"
+synopsis: "A standardized test harness for Hardcaml"
+description: """
+hardcaml_test_harness helps with common boilerplate when writing Hardcaml tests
+using Cyclesim or the Step test library. The harness handles constructing a
+test environment from a circuit and producing waveforms for debugging.
+"""
+url {
+  src:
+    "https://github.com/janestreet/hardcaml_test_harness/archive/3e9c58a0d92fd3d7335bcb8cef07f90cfba6c469.tar.gz"
+  checksum:
+    "sha256=4696ae85e32edebeab08af9de383a4f9b008d1ec06534d48f9c7f408b555c35e"
+}

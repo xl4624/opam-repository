@@ -18,4 +18,4 @@ opam repo add janestreet-bleeding-external https://github.com/janestreet/opam-re
 ```
 
 If you are looking to install the repository with our compiler extensions,
-please click [here](https://github.com/janestreet/opam-repository/tree/with-extensions).
+please click [here](https://github.com/oxcaml/opam-repository).
